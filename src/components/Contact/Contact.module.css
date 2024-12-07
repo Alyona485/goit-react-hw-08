@@ -1,38 +1,58 @@
-.icon {
-  width: 20px;
-  height: 20px;
-}
-
-.contactField {
+.contactItem {
   display: flex;
-  gap: 8px;
-  padding: 4px;
-  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  gap: 20px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #00b068;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.nameNumber {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contactCard {
+.contactItem p {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 8px;
-  border: 2px solid black;
-  border-radius: 8px;
-  width: 360px;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  color: rgb(10, 10, 10);
+  font-size: 18px;
+  width: 33%;
 }
 
-.btn {
+.contactButton {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 5px;
+  height: 25px;
   display: flex;
-  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border: none;
   cursor: pointer;
-  background-color: lightgrey;
-  color: black;
-  padding: 10px;
-  border-radius: 4px;
+  font-size: 36px;
   margin: 0;
+}
+
+@media screen and (max-width: 460px) {
+  .contactItem {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  .contactItem p {
+    margin: 0;
+  }
+
+  .contactButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }
